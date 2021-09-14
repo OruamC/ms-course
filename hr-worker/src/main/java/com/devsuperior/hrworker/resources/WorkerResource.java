@@ -22,9 +22,6 @@ import com.devsuperior.hrworker.repositories.WorkerRepository;
 public class WorkerResource {
 
 	private static Logger logger = org.slf4j.LoggerFactory.getLogger(WorkerResource.class);
-
-	@Value("${test.config}")
-	private String testConfig;
 	
 	private Environment env;
 	private WorkerRepository repository;
@@ -37,7 +34,7 @@ public class WorkerResource {
 	
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfig() {
-		logger.info("CONFIG = " + testConfig);
+//		logger.info("CONFIG = " + testConfig);
 		return ResponseEntity.noContent().build();
 	}
 	
